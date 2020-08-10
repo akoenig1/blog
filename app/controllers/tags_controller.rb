@@ -15,4 +15,6 @@ class TagsController < ApplicationController
 
         redirect_to action: "index"
     end
+
+    before_action :require_login, only: [:destroy]
 end
