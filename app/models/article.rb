@@ -19,6 +19,7 @@ class Article < ApplicationRecord
 
     def initialize_view_count
         self.view_count = 0
+        save!
     end
 
     def increase_view_count
@@ -26,5 +27,6 @@ class Article < ApplicationRecord
             self.view_count = 0
         end
         self.view_count += 1
+        save!
     end
 end
